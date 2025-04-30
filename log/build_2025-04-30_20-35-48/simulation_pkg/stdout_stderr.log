@@ -1,0 +1,48 @@
+running develop
+running egg_info
+creating simulation_pkg.egg-info
+writing simulation_pkg.egg-info/PKG-INFO
+writing dependency_links to simulation_pkg.egg-info/dependency_links.txt
+writing entry points to simulation_pkg.egg-info/entry_points.txt
+writing requirements to simulation_pkg.egg-info/requires.txt
+writing top-level names to simulation_pkg.egg-info/top_level.txt
+writing manifest file 'simulation_pkg.egg-info/SOURCES.txt'
+reading manifest file 'simulation_pkg.egg-info/SOURCES.txt'
+writing manifest file 'simulation_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/python3.10/site-packages/simulation-pkg.egg-link (link to .)
+Installing data_collection_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing draw_trajectory_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing load_ego_car_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing load_obstable_car_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing load_parking_car_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing load_traffic_light_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing sim_debug_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing sim_lane_info_extractor_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing sim_lidar_obstacle_detector_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing sim_lidar_processor_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing sim_motion_planner_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing sim_simulation_sender_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing sim_traffic_light_detector_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing sim_yolov8_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing sonar_processor_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing timer_based_obstacle_mover script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+Installing video_recording_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/simulation_pkg
+
+Installed /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg
+running symlink_data
+creating /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/ament_index
+creating /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/ament_index/resource_index
+creating /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/resource/simulation_pkg -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/package.xml -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg
+creating /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/launch
+symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/launch/mission_sim.launch.py -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/launch
+symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/launch/driving_sim.launch.py -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/launch
+creating /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/worlds
+symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/worlds/parking.world -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/worlds
+symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/worlds/lobby_with_tree.world -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/worlds
+symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/worlds/track.world -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/worlds
+creating /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/rviz
+symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/rviz/robot_model.rviz -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/rviz
+symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/rviz/only_sonar.rviz -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/rviz

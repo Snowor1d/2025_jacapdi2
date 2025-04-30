@@ -1,0 +1,7 @@
+failed to create symbolic link '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/interfaces_pkg/ament_cmake_python/interfaces_pkg/interfaces_pkg' because existing path cannot be removed: Is a directory
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_interfaces_pkg.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_interfaces_pkg] 오류 1
+gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_interfaces_pkg.dir/all] 오류 2
+gmake[1]: *** 끝나지 않은 작업을 기다리고 있습니다....
+[  0%] Built target interfaces_pkg__cpp
+[ 12%] Built target interfaces_pkg__rosidl_generator_c
+gmake: *** [Makefile:146: all] 오류 2

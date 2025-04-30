@@ -1,0 +1,18 @@
+[0.785s] Invoking command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/build --no-deps symlink_data
+[0.923s] running develop
+[1.017s] running egg_info
+[1.017s] writing decision_making_pkg.egg-info/PKG-INFO
+[1.017s] writing dependency_links to decision_making_pkg.egg-info/dependency_links.txt
+[1.017s] writing entry points to decision_making_pkg.egg-info/entry_points.txt
+[1.017s] writing requirements to decision_making_pkg.egg-info/requires.txt
+[1.018s] writing top-level names to decision_making_pkg.egg-info/top_level.txt
+[1.018s] reading manifest file 'decision_making_pkg.egg-info/SOURCES.txt'
+[1.018s] writing manifest file 'decision_making_pkg.egg-info/SOURCES.txt'
+[1.019s] running build_ext
+[1.019s] Creating /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/python3.10/site-packages/decision-making-pkg.egg-link (link to .)
+[1.019s] Installing motion_planner_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/decision_making_pkg
+[1.020s] Installing path_planner_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/decision_making_pkg
+[1.020s] 
+[1.020s] Installed /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg
+[1.020s] running symlink_data
+[1.059s] Invoked command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg' returned '0': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/build --no-deps symlink_data

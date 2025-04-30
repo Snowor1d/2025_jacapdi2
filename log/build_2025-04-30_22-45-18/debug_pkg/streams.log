@@ -1,0 +1,19 @@
+[0.800s] Invoking command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/build --no-deps symlink_data
+[0.938s] running develop
+[1.035s] running egg_info
+[1.035s] writing debug_pkg.egg-info/PKG-INFO
+[1.035s] writing dependency_links to debug_pkg.egg-info/dependency_links.txt
+[1.035s] writing entry points to debug_pkg.egg-info/entry_points.txt
+[1.035s] writing requirements to debug_pkg.egg-info/requires.txt
+[1.035s] writing top-level names to debug_pkg.egg-info/top_level.txt
+[1.036s] reading manifest file 'debug_pkg.egg-info/SOURCES.txt'
+[1.036s] writing manifest file 'debug_pkg.egg-info/SOURCES.txt'
+[1.037s] running build_ext
+[1.037s] Creating /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/python3.10/site-packages/debug-pkg.egg-link (link to .)
+[1.037s] Installing image_saver_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/debug_pkg
+[1.037s] Installing path_visualizer_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/debug_pkg
+[1.037s] Installing yolov8_visualizer_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/debug_pkg
+[1.037s] 
+[1.037s] Installed /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg
+[1.037s] running symlink_data
+[1.078s] Invoked command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg' returned '0': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/build --no-deps symlink_data

@@ -77,5 +77,11 @@ def generate_launch_description():
             executable='sim_simulation_sender_node',
             output='screen'
         ),
+        
+        Node(
+            package='camera_perception_pkg', 
+            executable='crosswalk_detector_node',
+            output='screen'
+        )
                      
     ])

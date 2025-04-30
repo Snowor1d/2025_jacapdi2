@@ -1,0 +1,23 @@
+[0.781s] Invoking command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/build --no-deps symlink_data --force
+[0.919s] running develop
+[1.014s] running egg_info
+[1.014s] writing camera_perception_pkg.egg-info/PKG-INFO
+[1.014s] writing dependency_links to camera_perception_pkg.egg-info/dependency_links.txt
+[1.014s] writing entry points to camera_perception_pkg.egg-info/entry_points.txt
+[1.014s] writing requirements to camera_perception_pkg.egg-info/requires.txt
+[1.014s] writing top-level names to camera_perception_pkg.egg-info/top_level.txt
+[1.016s] reading manifest file 'camera_perception_pkg.egg-info/SOURCES.txt'
+[1.016s] writing manifest file 'camera_perception_pkg.egg-info/SOURCES.txt'
+[1.016s] running build_ext
+[1.016s] Creating /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/python3.10/site-packages/camera-perception-pkg.egg-link (link to .)
+[1.017s] Installing crosswalk_detector_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/camera_perception_pkg
+[1.017s] Installing image_publisher_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/camera_perception_pkg
+[1.017s] Installing lane_info_extractor_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/camera_perception_pkg
+[1.017s] Installing traffic_light_detector_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/camera_perception_pkg
+[1.017s] Installing yolov8_node script to /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/camera_perception_pkg
+[1.017s] 
+[1.017s] Installed /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg
+[1.017s] running symlink_data
+[1.017s] symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/resource/camera_perception_pkg -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/ament_index/resource_index/packages
+[1.017s] symbolically linking /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/package.xml -> /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg
+[1.059s] Invoked command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg' returned '0': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/build --no-deps symlink_data --force

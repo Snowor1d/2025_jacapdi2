@@ -1,0 +1,19 @@
+[console_scripts]
+data_collection_node = simulation_pkg.data_collection_node:main
+draw_trajectory_node = simulation_pkg.lib.draw_trajectory_node:main
+load_ego_car_node = simulation_pkg.lib.load_ego_car_node:main
+load_obstable_car_node = simulation_pkg.lib.load_obstable_car_node:main
+load_parking_car_node = simulation_pkg.lib.load_parking_car_node:main
+load_traffic_light_node = simulation_pkg.lib.load_traffic_light_node:main
+sim_debug_node = simulation_pkg.lib.debug_node:main
+sim_lane_info_extractor_node = simulation_pkg.lane_info_extractor_node:main
+sim_lidar_obstacle_detector_node = simulation_pkg.lidar_obstacle_detector_node:main
+sim_lidar_processor_node = simulation_pkg.lidar_processor_node:main
+sim_motion_planner_node = simulation_pkg.motion_planner_node:main
+sim_simulation_sender_node = simulation_pkg.simulation_sender_node:main
+sim_traffic_light_detector_node = simulation_pkg.traffic_light_detector_node:main
+sim_yolov8_node = simulation_pkg.lib.yolov8_node:main
+sonar_processor_node = simulation_pkg.sonar_processor_node:main
+timer_based_obstacle_mover = simulation_pkg.timer_based_obstacle_mover:main
+video_recording_node = simulation_pkg.lib.video_recording_node:main
+

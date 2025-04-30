@@ -100,27 +100,44 @@ class MotionPlanningNode(Node):
                         self.left_speed_command = 0 
                         self.right_speed_command = 0
         else:
-            if self.path_data is None:
+            # path_data가 충분히 쌓였는지 확인
+            if not self.path_data or len(self.path_data) < 10:
                 self.steering_command = 0
             else:
-                target_slope = DMFL.calculate_slope_between_points(self.path_data[-10], self.path_data[-1])
-                
-                if target_slope > 0:
-                    self.steering_command =  7 # 예시 조향 값 (7이 최대 조향) 
-                elif target_slope < 0:
-                    self.steering_command =  -7
+                K_P = 0.085
+                SLOPE_THRESHOLD = 28
+                MAX_STEER = 25
+                MIN_STEER = -25
+                start_pt = self.path_data[-10]
+                end_pt   = self.path_data[-1]
+                target_slope = DMFL.calculate_slope_between_points(start_pt, end_pt)
+                #self.get_logger().info(f"target_slope: {target_slope}")
+                # 비례 제어: slope에 비례해서 명령값 생성
+                steer = K_P * target_slope
+
+                # 작은 기울기는 무시
+                if abs(target_slope) < SLOPE_THRESHOLD:
+                    steer_cmd = 0
                 else:
-                    self.steering_command = 0
+                    # saturate to ±MAX_STEER
+                    steer_cmd = max(-MAX_STEER, min(MAX_STEER, int(steer)))
+
+                self.steering_command = steer_cmd
+
+                if(len(self.path_data)<10):
+                    self.left_speed_command = 10
+                    self.right_speed_command = 10
+                else:
+                    self.left_speed_command = 200  # 예시 속도 값 (255가 최대 속도)
+                    self.right_speed_command = 200 # 예시 속도 값 (255가 최대 속도)
 
 
-            self.left_speed_command = 100  # 예시 속도 값 (255가 최대 속도)
-            self.right_speed_command = 100  # 예시 속도 값 (255가 최대 속도)
 
 
 
-        self.get_logger().info(f"steering: {self.steering_command}, " 
-                               f"left_speed: {self.left_speed_command}, " 
-                               f"right_speed: {self.right_speed_command}")
+        # self.get_logger().info(f"steering: {self.steering_command}, " 
+        #                        f"left_speed: {self.left_speed_command}, " 
+        #                        f"right_speed: {self.right_speed_command}")
 
         # 모션 명령 메시지 생성 및 퍼블리시
         motion_command_msg = MotionCommand()
