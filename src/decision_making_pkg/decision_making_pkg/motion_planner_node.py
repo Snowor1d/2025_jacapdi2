@@ -52,12 +52,17 @@ class MotionPlanningNode(Node):
         self.left_speed_command = 0
         self.right_speed_command = 0
         
+        self.direct_steering_command = 0
+        self.direct_left_speed_command = 0
+        self.direct_right_speed_command = 0
+        self.direct_order = False
 
         # 서브스크라이버 설정
         self.detection_sub = self.create_subscription(DetectionArray, self.sub_detection_topic, self.detection_callback, self.qos_profile)
         self.path_sub = self.create_subscription(PathPlanningResult, self.sub_path_topic, self.path_callback, self.qos_profile)
         self.traffic_light_sub = self.create_subscription(String, self.sub_traffic_light_topic, self.traffic_light_callback, self.qos_profile)
         self.lidar_sub = self.create_subscription(Bool, self.sub_lidar_obstacle_topic, self.lidar_callback, self.qos_profile)
+        self.direct_order_sub = self.create_subscription(MotionCommand, 'direct_path_planning_result', self.direct_order_callback, self.qos_profile)
 
         # 퍼블리셔 설정
         self.publisher = self.create_publisher(MotionCommand, self.pub_topic, self.qos_profile)
@@ -105,18 +110,18 @@ class MotionPlanningNode(Node):
             if not self.path_data or len(self.path_data) < 10:
                 self.steering_command = 0
             else:
-                K_P = 0.07
+                K_P = 0.078
                 SLOPE_THRESHOLD = 0
                 
-                MAX_STEER = 40
-                MIN_STEER = -40
+                MAX_STEER = 50
+                MIN_STEER = -50
                 start_pt = self.path_data[-10]
                 end_pt   = self.path_data[-1]
                 target_slope = DMFL.calculate_slope_between_points(start_pt, end_pt)
                 #self.get_logger().info(f"target_slope: {target_slope}")
                 # 비례 제어: slope에 비례해서 명령값 생성
-                if(abs(target_slope) > 70):
-                    steer = K_P * 1.8 * target_slope 
+                if(abs(target_slope) > 68):
+                    steer = K_P * 2.15* target_slope 
                     slow_down = True
                 else:
                     steer = K_P * target_slope
@@ -134,26 +139,41 @@ class MotionPlanningNode(Node):
                     self.left_speed_command = 10
                     self.right_speed_command = 10
                 elif slow_down:
-                    self.left_speed_command = 100
-                    self.right_speed_command = 100
+                    self.left_speed_command = 80
+                    self.right_speed_command = 80
                 else:
                     self.left_speed_command = 255  # 예시 속도 값 (255가 최대 속도)
                     self.right_speed_command = 255 # 예시 속도 값 (255가 최대 속도)
+        
+            motion_command_msg = MotionCommand()
+            if(self.direct_order == True):
+                motion_command_msg.steering = self.direct_steering_command
+                motion_command_msg.left_speed = self.direct_left_speed_command
+                motion_command_msg.right_speed = self.direct_right_speed_command
+                
+            else:
+                motion_command_msg.steering = self.steering_command
+                motion_command_msg.left_speed = self.left_speed_command
+                motion_command_msg.right_speed = self.right_speed_command
 
+            self.publisher.publish(motion_command_msg)
 
+    def direct_order_callback(self, msg: MotionCommand):
 
+        self.direct_steering_command = msg.steering
+        self.direct_left_speed_command = msg.left_speed 
+        self.direct_right_speed_command = msg.right_speed
+        if(self.direct_left_speed_command == -1):
+            self.direct_order = False
+        else:
+            self.direct_order = True
 
-
-        # self.get_logger().info(f"steering: {self.steering_command}, " 
-        #                        f"left_speed: {self.left_speed_command}, " 
-        #                        f"right_speed: {self.right_speed_command}")
-
-        # 모션 명령 메시지 생성 및 퍼블리시
-        motion_command_msg = MotionCommand()
-        motion_command_msg.steering = self.steering_command
-        motion_command_msg.left_speed = self.left_speed_command
-        motion_command_msg.right_speed = self.right_speed_command
-        self.publisher.publish(motion_command_msg)
+        # # 모션 명령 메시지 생성 및 퍼블리시
+        # motion_command_msg = MotionCommand()
+        # motion_command_msg.steering = self.steering_command
+        # motion_command_msg.left_speed = self.left_speed_command
+        # motion_command_msg.right_speed = self.right_speed_command
+        # self.publisher.publish(motion_command_msg)
 
 def main(args=None):
     rclpy.init(args=args)

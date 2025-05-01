@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, QoSHistoryPolicy, QoSDurabilityPolicy, QoSReliabilityPolicy
-from interfaces_pkg.msg import LaneInfo, PathPlanningResult, DetectionArray
+from interfaces_pkg.msg import LaneInfo, PathPlanningResult, DetectionArray, MotionCommand
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.interpolate import CubicSpline
@@ -23,10 +23,14 @@ class PathPlannerNode(Node):
         self.pub_topic = self.declare_parameter('pub_topic', PUB_TOPIC_NAME).value
         self.car_center_point = self.declare_parameter('car_center_point', CAR_CENTER_POINT).value
         self.selected_lane = 'lane2'
+        self.direct_order = False
+        self.direct_order_steer = 0
+        self.direct_order_left_speed = 0
+        self.direct_order_light_speed = 0
         
         self.cooldown_period = 500
-        self.size_threshold_1_to_2 = 135
-        self.size_threshold_2_to_1 = 140
+        self.size_threshold_1_to_2 = 125
+        self.size_threshold_2_to_1 = 130
         self.cooldown_counter = 0
         # QoS 설정
         self.qos_profile = QoSProfile(
@@ -51,6 +55,7 @@ class PathPlannerNode(Node):
         
         
         self.publisher = self.create_publisher(PathPlanningResult, self.pub_topic, self.qos_profile)
+        self.direct_publisher = self.create_publisher(MotionCommand, 'direct_path_planning_result', self.qos_profile)
 
     def lane_callback(self, msg: LaneInfo, lane_id: str):
         if (lane_id != self.selected_lane):
@@ -130,8 +135,39 @@ class PathPlannerNode(Node):
     def handle_trafficlight(self):
         # lane toggle
         old = self.selected_lane
+        
         self.selected_lane = 'lane1' if old == 'lane2' else 'lane2'
         self.get_logger().info(f"🚗 Switching from {old} → {self.selected_lane}")
+        execute_sequence = []
+        if(old=='lane1'):
+            execute_sequence = [[1.2, 25, 100, 100],
+                                [0.5, 0, 100, 100],
+                                [0.5, 0, 100, 100]]
+        else:
+            execute_sequence = [[1.2, -25, 100, 100],
+                                [1, 5, 100, 100],
+                                [0.5, 0, 100, 100]]
+
+        self.execute_direct_sequence(execute_sequence)
+
+    def execute_direct_sequence(self, sequence):
+    
+        for duration, steer, left_spd, right_spd in sequence:
+            end_t = time.time() + duration
+            while time.time() < end_t and rclpy.ok():
+                cmd = MotionCommand()
+                cmd.steering    = steer
+                cmd.left_speed  = left_spd
+                cmd.right_speed = right_spd
+                self.direct_publisher.publish(cmd)
+                time.sleep(0.1)   # 0.1초마다 반복 퍼블리시
+
+        # 시퀀스 종료 후 reset 신호 보내기
+        reset = MotionCommand()
+        reset.steering    = 0
+        reset.left_speed  = -1
+        reset.right_speed = -1
+        self.direct_publisher.publish(reset)
 
 
 
@@ -173,7 +209,21 @@ class PathPlannerNode(Node):
 
         # 경로 퍼블리시
         self.publisher.publish(path_msg)
-
+        
+        
+        if(self.direct_order == True):
+            motion_command_msg = MotionCommand()
+            motion_command_msg.steering = self.direct_order_steer
+            motion_command_msg.left_speed = self.direct_order_left_speed
+            motion_command_msg.right_speed = self.direct_order_light_speed
+            self.direct_publisher.publish(motion_command_msg)
+        else:
+            motion_command_msg = MotionCommand()
+            motion_command_msg.steering = 0
+            motion_command_msg.left_speed = -1
+            motion_command_msg.right_speed = -1
+            self.direct_publisher.publish(motion_command_msg)
+            
         # 타겟 지점 초기화 (다음 경로 계산을 위해)
         self.target_points.clear()
 
