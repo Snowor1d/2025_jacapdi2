@@ -82,6 +82,18 @@ def generate_launch_description():
             package='camera_perception_pkg', 
             executable='crosswalk_detector_node',
             output='screen'
+        ),
+        
+        Node(
+            package='camera_perception_pkg', 
+            executable='traffic_light_detector_node',
+            output='screen'
+        ),
+        
+        Node(
+            package='simulation_pkg', 
+            executable='load_traffic_light_node',
+            output='screen'
         )
                      
     ])

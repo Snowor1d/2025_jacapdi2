@@ -100,21 +100,27 @@ class MotionPlanningNode(Node):
                         self.left_speed_command = 0 
                         self.right_speed_command = 0
         else:
+            slow_down = False
             # path_data가 충분히 쌓였는지 확인
             if not self.path_data or len(self.path_data) < 10:
                 self.steering_command = 0
             else:
-                K_P = 0.085
-                SLOPE_THRESHOLD = 28
-                MAX_STEER = 25
-                MIN_STEER = -25
+                K_P = 0.07
+                SLOPE_THRESHOLD = 0
+                
+                MAX_STEER = 40
+                MIN_STEER = -40
                 start_pt = self.path_data[-10]
                 end_pt   = self.path_data[-1]
                 target_slope = DMFL.calculate_slope_between_points(start_pt, end_pt)
                 #self.get_logger().info(f"target_slope: {target_slope}")
                 # 비례 제어: slope에 비례해서 명령값 생성
-                steer = K_P * target_slope
-
+                if(abs(target_slope) > 70):
+                    steer = K_P * 1.8 * target_slope 
+                    slow_down = True
+                else:
+                    steer = K_P * target_slope
+                #self.get_logger().info(f"slope : {target_slope}")
                 # 작은 기울기는 무시
                 if abs(target_slope) < SLOPE_THRESHOLD:
                     steer_cmd = 0
@@ -127,9 +133,12 @@ class MotionPlanningNode(Node):
                 if(len(self.path_data)<10):
                     self.left_speed_command = 10
                     self.right_speed_command = 10
+                elif slow_down:
+                    self.left_speed_command = 100
+                    self.right_speed_command = 100
                 else:
-                    self.left_speed_command = 200  # 예시 속도 값 (255가 최대 속도)
-                    self.right_speed_command = 200 # 예시 속도 값 (255가 최대 속도)
+                    self.left_speed_command = 255  # 예시 속도 값 (255가 최대 속도)
+                    self.right_speed_command = 255 # 예시 속도 값 (255가 최대 속도)
 
 
 

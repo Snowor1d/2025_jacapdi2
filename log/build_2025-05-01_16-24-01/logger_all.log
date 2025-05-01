@@ -1,0 +1,420 @@
+[0.082s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.082s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x77f2fff26dd0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x77f2fff26800>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x77f2fff26800>>, mixin_verb=('build',))
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.219s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extension 'ignore_ament_install'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extensions ['colcon_pkg']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extension 'colcon_pkg'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extensions ['colcon_meta']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extension 'colcon_meta'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extensions ['ros']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_perception_pkg) by extension 'ros'
+[0.228s] DEBUG:colcon.colcon_core.package_identification:Package 'src/camera_perception_pkg' with type 'ros.ament_python' and name 'camera_perception_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extensions ['colcon_pkg']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extension 'colcon_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extensions ['colcon_meta']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extension 'colcon_meta'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extensions ['ros']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/debug_pkg) by extension 'ros'
+[0.228s] DEBUG:colcon.colcon_core.package_identification:Package 'src/debug_pkg' with type 'ros.ament_python' and name 'debug_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extension 'ignore_ament_install'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extensions ['colcon_pkg']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extension 'colcon_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extensions ['colcon_meta']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extension 'colcon_meta'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_making_pkg) by extension 'ros'
+[0.229s] DEBUG:colcon.colcon_core.package_identification:Package 'src/decision_making_pkg' with type 'ros.ament_python' and name 'decision_making_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extension 'ignore_ament_install'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extensions ['colcon_pkg']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extension 'colcon_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extensions ['colcon_meta']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extension 'colcon_meta'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/interfaces_pkg) by extension 'ros'
+[0.230s] DEBUG:colcon.colcon_core.package_identification:Package 'src/interfaces_pkg' with type 'ros.ament_cmake' and name 'interfaces_pkg'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extension 'ignore_ament_install'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extensions ['colcon_pkg']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extension 'colcon_pkg'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extensions ['colcon_meta']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extension 'colcon_meta'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extensions ['ros']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar_perception_pkg) by extension 'ros'
+[0.230s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lidar_perception_pkg' with type 'ros.ament_python' and name 'lidar_perception_pkg'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extension 'ignore'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extension 'ignore_ament_install'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extensions ['colcon_pkg']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extension 'colcon_pkg'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extensions ['colcon_meta']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extension 'colcon_meta'
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extensions ['ros']
+[0.230s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extension 'ros'
+[0.232s] DEBUG:colcon.colcon_core.package_identification:Package 'src/simulation_pkg' with type 'ros.ament_python' and name 'simulation_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.244s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.245s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.246s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/amrl_sunny/ros2_autonomous_vehicle_simulation/install
+[0.246s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/amrl_sunny/2025_jacapdi/install
+[0.247s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 279 installed packages in /opt/ros/humble
+[0.248s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_target' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'camera_perception_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.265s] DEBUG:colcon.colcon_core.verb:Building package 'camera_perception_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg', 'merge_install': False, 'path': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/camera_perception_pkg', 'symlink_install': True, 'test_result_base': None}
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_target' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'debug_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.265s] DEBUG:colcon.colcon_core.verb:Building package 'debug_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg', 'merge_install': False, 'path': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/debug_pkg', 'symlink_install': True, 'test_result_base': None}
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_target' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'decision_making_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.265s] DEBUG:colcon.colcon_core.verb:Building package 'decision_making_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg', 'merge_install': False, 'path': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/decision_making_pkg', 'symlink_install': True, 'test_result_base': None}
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_target' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'interfaces_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.265s] DEBUG:colcon.colcon_core.verb:Building package 'interfaces_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/interfaces_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg', 'merge_install': False, 'path': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/interfaces_pkg', 'symlink_install': True, 'test_result_base': None}
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_args' from command line to 'None'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_target' from command line to 'None'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'lidar_perception_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.266s] DEBUG:colcon.colcon_core.verb:Building package 'lidar_perception_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg', 'merge_install': False, 'path': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/lidar_perception_pkg', 'symlink_install': True, 'test_result_base': None}
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_args' from command line to 'None'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_target' from command line to 'None'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.266s] DEBUG:colcon.colcon_core.verb:Building package 'simulation_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg', 'merge_install': False, 'path': '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/simulation_pkg', 'symlink_install': True, 'test_result_base': None}
+[0.266s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.267s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.267s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/camera_perception_pkg' with build type 'ament_python'
+[0.267s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_perception_pkg', 'ament_prefix_path')
+[0.269s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/hook/ament_prefix_path.ps1'
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/hook/ament_prefix_path.dsv'
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/hook/ament_prefix_path.sh'
+[0.270s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.270s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.272s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/debug_pkg' with build type 'ament_python'
+[0.272s] Level 1:colcon.colcon_core.shell:create_environment_hook('debug_pkg', 'ament_prefix_path')
+[0.272s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/hook/ament_prefix_path.ps1'
+[0.272s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/hook/ament_prefix_path.dsv'
+[0.272s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/hook/ament_prefix_path.sh'
+[0.272s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.272s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.274s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/decision_making_pkg' with build type 'ament_python'
+[0.274s] Level 1:colcon.colcon_core.shell:create_environment_hook('decision_making_pkg', 'ament_prefix_path')
+[0.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/hook/ament_prefix_path.ps1'
+[0.274s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/hook/ament_prefix_path.dsv'
+[0.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/hook/ament_prefix_path.sh'
+[0.274s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.274s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.276s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/interfaces_pkg' with build type 'ament_cmake'
+[0.276s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/interfaces_pkg'
+[0.276s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.276s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.277s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/lidar_perception_pkg' with build type 'ament_python'
+[0.278s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_perception_pkg', 'ament_prefix_path')
+[0.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/ament_prefix_path.ps1'
+[0.278s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/ament_prefix_path.dsv'
+[0.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/ament_prefix_path.sh'
+[0.278s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.278s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.424s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/camera_perception_pkg'
+[0.424s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.424s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.564s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/debug_pkg'
+[0.565s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.565s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.709s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/decision_making_pkg'
+[0.709s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.709s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.713s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/interfaces_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg:/home/amrl_sunny/2025_jacapdi/install/simulation_pkg:/home/amrl_sunny/2025_jacapdi/install/decision_making_pkg:/home/amrl_sunny/2025_jacapdi/install/debug_pkg:/home/amrl_sunny/2025_jacapdi/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/interfaces_pkg -- -j20 -l20
+[0.858s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/lidar_perception_pkg'
+[0.858s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.858s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.940s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/interfaces_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg:/home/amrl_sunny/2025_jacapdi/install/simulation_pkg:/home/amrl_sunny/2025_jacapdi/install/decision_making_pkg:/home/amrl_sunny/2025_jacapdi/install/debug_pkg:/home/amrl_sunny/2025_jacapdi/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --build /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/interfaces_pkg -- -j20 -l20
+[0.947s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/interfaces_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg:/home/amrl_sunny/2025_jacapdi/install/simulation_pkg:/home/amrl_sunny/2025_jacapdi/install/decision_making_pkg:/home/amrl_sunny/2025_jacapdi/install/debug_pkg:/home/amrl_sunny/2025_jacapdi/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/interfaces_pkg
+[1.006s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces_pkg)
+[1.006s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/interfaces_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg:/home/amrl_sunny/2025_jacapdi/install/simulation_pkg:/home/amrl_sunny/2025_jacapdi/install/decision_making_pkg:/home/amrl_sunny/2025_jacapdi/install/debug_pkg:/home/amrl_sunny/2025_jacapdi/install/camera_perception_pkg:/opt/ros/humble /usr/bin/cmake --install /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/interfaces_pkg
+[1.008s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg' for CMake module files
+[1.009s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg' for CMake config files
+[1.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces_pkg', 'cmake_prefix_path')
+[1.010s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.ps1'
+[1.010s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.dsv'
+[1.010s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.sh'
+[1.010s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/lib'
+[1.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces_pkg', 'ld_library_path_lib')
+[1.011s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.ps1'
+[1.011s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.dsv'
+[1.011s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.sh'
+[1.011s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/bin'
+[1.011s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/lib/pkgconfig/interfaces_pkg.pc'
+[1.011s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/lib/python3.10/site-packages'
+[1.011s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/bin'
+[1.012s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/package.ps1'
+[1.012s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/package.dsv'
+[1.012s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/package.sh'
+[1.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/package.bash'
+[1.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/package.zsh'
+[1.013s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/colcon-core/packages/interfaces_pkg)
+[1.014s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces_pkg)
+[1.014s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg' for CMake module files
+[1.014s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg' for CMake config files
+[1.015s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces_pkg', 'cmake_prefix_path')
+[1.015s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.ps1'
+[1.015s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.dsv'
+[1.015s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/cmake_prefix_path.sh'
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/lib'
+[1.016s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces_pkg', 'ld_library_path_lib')
+[1.016s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.ps1'
+[1.016s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.dsv'
+[1.016s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/hook/ld_library_path_lib.sh'
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/bin'
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/lib/pkgconfig/interfaces_pkg.pc'
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/lib/python3.10/site-packages'
+[1.016s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/bin'
+[1.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/package.ps1'
+[1.017s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/package.dsv'
+[1.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/package.sh'
+[1.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/package.bash'
+[1.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/interfaces_pkg/package.zsh'
+[1.017s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/share/colcon-core/packages/interfaces_pkg)
+[1.075s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg/build --no-deps symlink_data
+[1.075s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/build --no-deps symlink_data
+[1.076s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/build --no-deps symlink_data
+[1.076s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/build --no-deps symlink_data
+[1.346s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_perception_pkg', 'pythonpath_develop')
+[1.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg/share/lidar_perception_pkg/hook/pythonpath_develop.ps1'
+[1.347s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg' returned '0': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg/build --no-deps symlink_data
+[1.347s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg/share/lidar_perception_pkg/hook/pythonpath_develop.dsv'
+[1.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg/share/lidar_perception_pkg/hook/pythonpath_develop.sh'
+[1.348s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg' for CMake module files
+[1.349s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg' for CMake config files
+[1.349s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/lib'
+[1.349s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/bin'
+[1.349s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/lib/pkgconfig/lidar_perception_pkg.pc'
+[1.349s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/lib/python3.10/site-packages'
+[1.349s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar_perception_pkg', 'pythonpath')
+[1.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/pythonpath.ps1'
+[1.350s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/pythonpath.dsv'
+[1.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/hook/pythonpath.sh'
+[1.350s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/bin'
+[1.350s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar_perception_pkg)
+[1.350s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/package.ps1'
+[1.351s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/package.dsv'
+[1.351s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/package.sh'
+[1.351s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/package.bash'
+[1.351s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/lidar_perception_pkg/package.zsh'
+[1.351s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/share/colcon-core/packages/lidar_perception_pkg)
+[1.352s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_perception_pkg', 'pythonpath_develop')
+[1.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/share/camera_perception_pkg/hook/pythonpath_develop.ps1'
+[1.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg' returned '0': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/build --no-deps symlink_data
+[1.353s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/share/camera_perception_pkg/hook/pythonpath_develop.dsv'
+[1.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg/share/camera_perception_pkg/hook/pythonpath_develop.sh'
+[1.353s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg' for CMake module files
+[1.353s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg' for CMake config files
+[1.353s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib'
+[1.353s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/bin'
+[1.353s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/pkgconfig/camera_perception_pkg.pc'
+[1.354s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/python3.10/site-packages'
+[1.354s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_perception_pkg', 'pythonpath')
+[1.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/hook/pythonpath.ps1'
+[1.354s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/hook/pythonpath.dsv'
+[1.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/hook/pythonpath.sh'
+[1.354s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/bin'
+[1.354s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(camera_perception_pkg)
+[1.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/package.ps1'
+[1.355s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/package.dsv'
+[1.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/package.sh'
+[1.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/package.bash'
+[1.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/camera_perception_pkg/package.zsh'
+[1.355s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/share/colcon-core/packages/camera_perception_pkg)
+[1.355s] Level 1:colcon.colcon_core.shell:create_environment_hook('decision_making_pkg', 'pythonpath_develop')
+[1.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/share/decision_making_pkg/hook/pythonpath_develop.ps1'
+[1.356s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/share/decision_making_pkg/hook/pythonpath_develop.dsv'
+[1.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/share/decision_making_pkg/hook/pythonpath_develop.sh'
+[1.356s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg' returned '0': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg/build --no-deps symlink_data
+[1.356s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg' for CMake module files
+[1.357s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg' for CMake config files
+[1.357s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib'
+[1.357s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/bin'
+[1.357s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/pkgconfig/decision_making_pkg.pc'
+[1.357s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/python3.10/site-packages'
+[1.357s] Level 1:colcon.colcon_core.shell:create_environment_hook('decision_making_pkg', 'pythonpath')
+[1.357s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/hook/pythonpath.ps1'
+[1.357s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/hook/pythonpath.dsv'
+[1.357s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/hook/pythonpath.sh'
+[1.357s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/bin'
+[1.358s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(decision_making_pkg)
+[1.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/package.ps1'
+[1.358s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/package.dsv'
+[1.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/package.sh'
+[1.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/package.bash'
+[1.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/decision_making_pkg/package.zsh'
+[1.358s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/share/colcon-core/packages/decision_making_pkg)
+[1.359s] Level 1:colcon.colcon_core.shell:create_environment_hook('debug_pkg', 'pythonpath_develop')
+[1.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/share/debug_pkg/hook/pythonpath_develop.ps1'
+[1.359s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg' returned '0': PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/build --no-deps symlink_data
+[1.359s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/share/debug_pkg/hook/pythonpath_develop.dsv'
+[1.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg/share/debug_pkg/hook/pythonpath_develop.sh'
+[1.360s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg' for CMake module files
+[1.360s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg' for CMake config files
+[1.360s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib'
+[1.360s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/bin'
+[1.360s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/pkgconfig/debug_pkg.pc'
+[1.360s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/python3.10/site-packages'
+[1.360s] Level 1:colcon.colcon_core.shell:create_environment_hook('debug_pkg', 'pythonpath')
+[1.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/hook/pythonpath.ps1'
+[1.360s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/hook/pythonpath.dsv'
+[1.361s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/hook/pythonpath.sh'
+[1.361s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/bin'
+[1.361s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(debug_pkg)
+[1.361s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/package.ps1'
+[1.361s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/package.dsv'
+[1.361s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/package.sh'
+[1.361s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/package.bash'
+[1.362s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/debug_pkg/package.zsh'
+[1.362s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/share/colcon-core/packages/debug_pkg)
+[1.362s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/simulation_pkg' with build type 'ament_python'
+[1.362s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation_pkg', 'ament_prefix_path')
+[1.362s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/hook/ament_prefix_path.ps1'
+[1.362s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/hook/ament_prefix_path.dsv'
+[1.362s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/hook/ament_prefix_path.sh'
+[1.363s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.363s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.517s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/src/simulation_pkg'
+[1.517s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.517s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.697s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg': AMENT_PREFIX_PATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg:/home/amrl_sunny/2025_jacapdi/install/simulation_pkg:/home/amrl_sunny/2025_jacapdi/install/decision_making_pkg:/home/amrl_sunny/2025_jacapdi/install/debug_pkg:/home/amrl_sunny/2025_jacapdi/install/camera_perception_pkg:/opt/ros/humble PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/local/lib/python3.10/dist-packages:/home/amrl_sunny/2025_jacapdi/build/simulation_pkg:/home/amrl_sunny/2025_jacapdi/install/simulation_pkg/lib/python3.10/site-packages:/home/amrl_sunny/2025_jacapdi/build/decision_making_pkg:/home/amrl_sunny/2025_jacapdi/install/decision_making_pkg/lib/python3.10/site-packages:/home/amrl_sunny/2025_jacapdi/build/debug_pkg:/home/amrl_sunny/2025_jacapdi/install/debug_pkg/lib/python3.10/site-packages:/home/amrl_sunny/2025_jacapdi/build/camera_perception_pkg:/home/amrl_sunny/2025_jacapdi/install/camera_perception_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/build --no-deps symlink_data
+[1.944s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation_pkg', 'pythonpath_develop')
+[1.944s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg' returned '0': AMENT_PREFIX_PATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg:/home/amrl_sunny/2025_jacapdi/install/simulation_pkg:/home/amrl_sunny/2025_jacapdi/install/decision_making_pkg:/home/amrl_sunny/2025_jacapdi/install/debug_pkg:/home/amrl_sunny/2025_jacapdi/install/camera_perception_pkg:/opt/ros/humble PYTHONPATH=/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/decision_making_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/decision_making_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/debug_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/debug_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/camera_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/camera_perception_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/lidar_perception_pkg:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/lidar_perception_pkg/lib/python3.10/site-packages:/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/interfaces_pkg/local/lib/python3.10/dist-packages:/home/amrl_sunny/2025_jacapdi/build/simulation_pkg:/home/amrl_sunny/2025_jacapdi/install/simulation_pkg/lib/python3.10/site-packages:/home/amrl_sunny/2025_jacapdi/build/decision_making_pkg:/home/amrl_sunny/2025_jacapdi/install/decision_making_pkg/lib/python3.10/site-packages:/home/amrl_sunny/2025_jacapdi/build/debug_pkg:/home/amrl_sunny/2025_jacapdi/install/debug_pkg/lib/python3.10/site-packages:/home/amrl_sunny/2025_jacapdi/build/camera_perception_pkg:/home/amrl_sunny/2025_jacapdi/install/camera_perception_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/build --no-deps symlink_data
+[1.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/share/simulation_pkg/hook/pythonpath_develop.ps1'
+[1.945s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/share/simulation_pkg/hook/pythonpath_develop.dsv'
+[1.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/build/simulation_pkg/share/simulation_pkg/hook/pythonpath_develop.sh'
+[1.946s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg' for CMake module files
+[1.946s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg' for CMake config files
+[1.946s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib'
+[1.946s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/bin'
+[1.946s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/pkgconfig/simulation_pkg.pc'
+[1.946s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/lib/python3.10/site-packages'
+[1.946s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation_pkg', 'pythonpath')
+[1.946s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/hook/pythonpath.ps1'
+[1.947s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/hook/pythonpath.dsv'
+[1.947s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/hook/pythonpath.sh'
+[1.947s] Level 1:colcon.colcon_core.environment:checking '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/bin'
+[1.947s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulation_pkg)
+[1.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/package.ps1'
+[1.947s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/package.dsv'
+[1.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/package.sh'
+[1.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/package.bash'
+[1.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/simulation_pkg/package.zsh'
+[1.948s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/simulation_pkg/share/colcon-core/packages/simulation_pkg)
+[1.948s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.948s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.948s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.948s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.951s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.952s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.952s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.964s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.964s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/local_setup.ps1'
+[1.965s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/_local_setup_util_ps1.py'
+[1.966s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/setup.ps1'
+[1.966s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/local_setup.sh'
+[1.967s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/_local_setup_util_sh.py'
+[1.967s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/setup.sh'
+[1.968s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/local_setup.bash'
+[1.968s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/setup.bash'
+[1.969s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/local_setup.zsh'
+[1.969s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/amrl_sunny/ros2_autonomous_vehicle_simulation/install/setup.zsh'

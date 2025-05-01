@@ -49,9 +49,9 @@ class CrosswalkDetector(Node):
             qos
         )
 
-        self.get_logger().info(f"[CrosswalkDetector] Subscribing `{self.sub_detection_topic}`, "
-                               f"publishing filtered on `{self.pub_topic}` "
-                               f"and sizes on `{self.size_pub_topic}`")
+        # self.get_logger().info(f"[CrosswalkDetector] Subscribing `{self.sub_detection_topic}`, "
+        #                        f"publishing filtered on `{self.pub_topic}` "
+        #                        f"and sizes on `{self.size_pub_topic}`")
 
     def detections_callback(self, msg: DetectionArray):
         # 1) 횡단보도 검출만 필터링
@@ -74,7 +74,7 @@ class CrosswalkDetector(Node):
             h = float(d.bbox.size.y)
             size_msg.data.extend([w, h])
             # 또는 로그로도 출력 가능
-            self.get_logger().info(f"Crosswalk bbox size → width: {w:.1f}, height: {h:.1f}")
+            #self.get_logger().info(f"Crosswalk bbox size → width: {w:.1f}, height: {h:.1f}")
 
         self.size_pub.publish(size_msg)
 

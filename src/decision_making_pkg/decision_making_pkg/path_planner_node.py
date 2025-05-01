@@ -25,8 +25,8 @@ class PathPlannerNode(Node):
         self.selected_lane = 'lane2'
         
         self.cooldown_period = 500
-        self.size_threshold_1_to_2 = 615
-        self.size_threshold_2_to_1 = 550
+        self.size_threshold_1_to_2 = 135
+        self.size_threshold_2_to_1 = 140
         self.cooldown_counter = 0
         # QoS 설정
         self.qos_profile = QoSProfile(
@@ -47,7 +47,7 @@ class PathPlannerNode(Node):
         # 퍼블리셔 설정 (경로 계획 결과 퍼블리시)
         
         self.crosswalk_sub = self.create_subscription(
-            DetectionArray, 'crosswalk_detections', self.crosswalk_callback, self.qos_profile)
+            DetectionArray, 'detections', self.detections_callback, self.qos_profile)
         
         
         self.publisher = self.create_publisher(PathPlanningResult, self.pub_topic, self.qos_profile)
@@ -62,38 +62,77 @@ class PathPlannerNode(Node):
         # 타겟 지점이 3개 이상 모이면 경로 계획 시작
         if len(self.target_points) >= 3:
             self.plan_path()
-            
-    def crosswalk_callback(self, msg: DetectionArray):
-        # 1) 이미 쿨다운 중이면 카운터만 줄이고 리턴
+    def detections_callback(self, msg: DetectionArray):
+
         if self.cooldown_counter > 0:
             self.cooldown_counter -= 1
             return
 
-        # 2) 바운딩박스 크기가 threshold 이상인 crosswalk만 필터
-        large_crosswalks = []
+
+        large_traffic_lights = []
         for d in msg.detections:
-            if d.class_name.lower() == 'crosswalk':
+            # if d.class_name.lower() == 'crosswalk':
+            #     w = d.bbox.size.x
+            #     h = d.bbox.size.y
+            #     if(self.selected_lane == 'lane1' and w >= self.size_threshold_1_to_2) or \
+            #        (self.selected_lane == 'lane2' and w >= self.size_threshold_2_to_1):
+            #         sizes.append([w, h])
+            if d.class_name.lower() == 'traffic_light':
                 w = d.bbox.size.x
+                #self.get_logger().info(f"w: {w}")
                 h = d.bbox.size.y
                 if(self.selected_lane == 'lane1' and w >= self.size_threshold_1_to_2) or \
                    (self.selected_lane == 'lane2' and w >= self.size_threshold_2_to_1):
-                    if(self.selected_lane == 'lane1'):
-                        time.sleep(0.4)
-                    large_crosswalks.append(d)
-
-        if not large_crosswalks:
+                    large_traffic_lights.append([w, h])
+        
+        if not large_traffic_lights:
             return
-
-        # 3) 교차로 감지 & 쿨다운 없음 → 차선 전환
-        #self.get_logger().info(f"🚸 Large crosswalk detected (w,h ≥ {self.size_threshold})")
-        self.handle_crosswalk()
+        self.get_logger().info(f"🚦 Large traffic light detected (w,h ≥ {self.size_threshold_1_to_2})")
+        
+        self.handle_trafficlight()
         self.cooldown_counter = self.cooldown_period
+        
+        
+            
+    # def crosswalk_callback(self, msg: DetectionArray):
+    #     # 1) 이미 쿨다운 중이면 카운터만 줄이고 리턴
+    #     if self.cooldown_counter > 0:
+    #         self.cooldown_counter -= 1
+    #         return
 
-    def handle_crosswalk(self):
+    #     # 2) 바운딩박스 크기가 threshold 이상인 crosswalk만 필터
+    #     large_crosswalks = []
+    #     for d in msg.detections:
+    #         if d.class_name.lower() == 'crosswalk':
+    #             w = d.bbox.size.x
+    #             h = d.bbox.size.y
+    #             if(self.selected_lane == 'lane1' and w >= self.size_threshold_1_to_2) or \
+    #                (self.selected_lane == 'lane2' and w >= self.size_threshold_2_to_1):
+    #                 if(self.selected_lane == 'lane1'):
+    #                     time.sleep(0.4)
+    #                 large_crosswalks.append(d)
+
+    #     if not large_crosswalks:
+    #         return
+
+    #     # 3) 교차로 감지 & 쿨다운 없음 → 차선 전환
+    #     #self.get_logger().info(f"🚸 Large crosswalk detected (w,h ≥ {self.size_threshold})")
+    #     self.handle_crosswalk()
+    #     self.cooldown_counter = self.cooldown_period
+
+    # def handle_crosswalk(self):
+    #     # lane toggle
+    #     old = self.selected_lane
+    #     self.selected_lane = 'lane1' if old == 'lane2' else 'lane2'
+    #     self.get_logger().info(f"🚗 Switching from {old} → {self.selected_lane}")
+        
+
+    def handle_trafficlight(self):
         # lane toggle
         old = self.selected_lane
         self.selected_lane = 'lane1' if old == 'lane2' else 'lane2'
         self.get_logger().info(f"🚗 Switching from {old} → {self.selected_lane}")
+
 
 
     def plan_path(self):

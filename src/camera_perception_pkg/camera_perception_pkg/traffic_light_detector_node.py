@@ -23,7 +23,7 @@ from .lib import camera_perception_func_lib as CPFL
 # ---------------Variable Setting---------------
 # Subscribe할 토픽 이름
 SUB_DETECTION_TOPIC_NAME = "detections"
-SUB_IMAGE_TOPIC_NAME = "image_raw"
+SUB_IMAGE_TOPIC_NAME = "camera/image_raw"
 
 # Publish할 토픽 이름
 PUB_TOPIC_NAME = "yolov8_traffic_light_info"
@@ -39,7 +39,11 @@ class TrafficLightDetector(Node):
         self.pub_topic = self.declare_parameter('pub_topic', PUB_TOPIC_NAME).value
 
         self.cv_bridge = CvBridge()
-
+        sensor_qos = QoSProfile(
+            reliability=QoSReliabilityPolicy.BEST_EFFORT,
+            history=QoSHistoryPolicy.KEEP_LAST,
+            depth=10
+        )
         self.qos_profile = QoSProfile(
             reliability=QoSReliabilityPolicy.RELIABLE,
             history=QoSHistoryPolicy.KEEP_LAST,
@@ -47,16 +51,16 @@ class TrafficLightDetector(Node):
             depth=1
         )
 
-        self.detection_sub = Subscriber(self, DetectionArray, self.sub_detection_topic, qos_profile=self.qos_profile)
-        self.image_sub = Subscriber(self, Image, self.sub_image_topic, qos_profile=self.qos_profile)
-        self.ts = ApproximateTimeSynchronizer([self.detection_sub, self.image_sub], queue_size=1, slop=0.5)
+        self.detection_sub = Subscriber(self, DetectionArray, self.sub_detection_topic, qos_profile=sensor_qos)
+        self.image_sub = Subscriber(self, Image, self.sub_image_topic, qos_profile=sensor_qos)
+        self.ts = ApproximateTimeSynchronizer([self.detection_sub, self.image_sub], queue_size=10, slop=0.5)
         self.ts.registerCallback(self.sync_callback)
 
         self.publisher = self.create_publisher(String, self.pub_topic, self.qos_profile)
 
     def sync_callback(self, detection_msg: DetectionArray, image_msg: Image):
         cv_image = self.cv_bridge.imgmsg_to_cv2(image_msg)
-        
+        self.get_logger().info(f"[TrafficLightDetector] Received image and detection data")
         traffic_light_detected = False
         for detection in detection_msg.detections:
             if detection.class_name == 'traffic_light':
